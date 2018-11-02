@@ -1,6 +1,6 @@
 # Applied Data Analyis - Project
 
-## Reddit (nice title)
+## Reddit <insert nice title here>
 
 Has the high connectivity that came with the internet made us better? Is it fostering healthy discussion and debate between the different collectives or is the echo-chamber effect become predominant and we are actually become more divided?
 
