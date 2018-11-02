@@ -6,7 +6,7 @@ Has the high connectivity that came with the internet made us better? Is it fost
 
 Reddit is the "frontpage of the internet" (give some stats about reddit, user count, etc). It's developers have been open about the huge mount of information that flows around the site (more stats) and have always tried to keep up with the public's interest and to not fold to external biases (net neutrality?)
 
-This dataset (all of reddit's comments from its inception and up to March 2017) has an interesting structure (subreddits) and it allows to filter specific topics and even has the comments tagged with usernames so we can watch for cross-interaction between subreddits, brigadding, etc
+This dataset (all of reddit's comments from its inception and up to March 2017) has an interesting structure (subreddits) and it allows to filter specific topics and even has the comments tagged with usernames so we can watch for cross-interaction between subreddits, brigadding, troll detection, etc
 
 topics that we could research:
 - the battle for net neutrality
