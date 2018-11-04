@@ -18,28 +18,29 @@ Can we fight it? How?
 We plan on using the Reddit comments dataset. It contains all of reddit's comments from its inception and up to March 2017. Reddit already has a rich structure and we plan to take advantage of it. We are going to focus on subreddits, as those are going to be our communities. Since we also have user data we can watch for cross-interaction between subreddits, brigadding, trolls, bots, etc.
 This is basically a list of 53,851,542 JSON objects with comments using the following structure:
 
-{
-   "gilded":0,
-   "author_flair_text":"Male",
-   "author_flair_css_class":"male",
-   "retrieved_on":1425124228,
-   "ups":3,
-   "subreddit_id":"t5_2s30g",
-   "edited":false,
-   "controversiality":0,
-   "parent_id":"t1_cnapn0k",
-   "subreddit":"AskMen",
-   "body":"content",
-   "created_utc":"1420070668",
-   "downs":0,
-   "score":3,
-   "author":"TheDukeofEtown",
-   "archived":false,
-   "distinguished":null,
-   "id":"cnasd6x",
-   "score_hidden":false,
-   "name":"t1_cnasd6x",
-   "link_id":"t3_2qyhmp"
+{  
+
+   "gilded":0,  
+   "author_flair_text":"Male",  
+   "author_flair_css_class":"male",  
+   "retrieved_on":1425124228,  
+   "ups":3,  
+   "subreddit_id":"t5_2s30g",  
+   "edited":false,  
+   "controversiality":0,  
+   "parent_id":"t1_cnapn0k",  
+   "subreddit":"AskMen",  
+   "body":"content",  
+   "created_utc":"1420070668",  
+   "downs":0,  
+   "score":3,  
+   "author":"TheDukeofEtown",  
+   "archived":false,  
+   "distinguished":null,  
+   "id":"cnasd6x",  
+   "score_hidden":false,  
+   "name":"t1_cnasd6x",  
+   "link_id":"t3_2qyhmp"  
 }
 
 Specifically, we plan to mainly use the username, subreddit id, and timestamp. As the project unfolds we might make use of controversiality, downvotes, score, etc in order to go more in depth (if time allows).
