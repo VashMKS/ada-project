@@ -1,19 +1,22 @@
 # An Overview on the Echo-chamber Effect
 
 ## Abstract
-Has the high connectivity that came with the internet made us better? Is it fostering healthy discussion and debate between the different communities or is the echo-chamber effect predominant and we are actually becoming more divided?
+Has the high connectivity that came with the internet made us better? Is it fostering healthy discussion and debate between the different communities or is the echo-chamber effect predominant and we are actually becoming more divided and reinforcing our biases?
+https://en.wikipedia.org/wiki/Echo_chamber_(media)
 
-Reddit is the "frontpage of the internet" (give some stats about reddit, user count, etc). It's developers have been open about the huge amount of information that flows around the site (more stats) and have always tried to keep up with the public's interest and to not fold to external biases (net neutrality?). That should make up for a pretty good uncensored dataset on the interaction of the different communities.
+Reddit is the "frontpage of the internet" (13 years online, mor than half a billion monthly users, more stats at https://en.wikipedia.org/wiki/Reddit). It's developers have been open about the huge amount of information that flows around the site and the responsibility it takes to handle such a social outlet. We will make use of the dataset containing reddit comments, which should make up for a pretty good uncensored dataset on the interaction of the different communities.
+
+Our goal is to have a good picture of how a particular technology (the internet no less) is shaping debate and in consequence, society. This is really important since big challenges lie ahead of our generation: climate change, the rise of populism or the increasing inequality, both between nations and inside their borders, just to give a few examples. Fake news and crafted narratives have been a hot topic for a while, and while the internet has given certain agents the ability to reach a lot of people with minimal effort it has also provided huge advancements just for the sheer fact that sharing information and knowledge is easier than ever in history. Hence, understanding the way in which we communicate through that vast network is key in order to come up with ways to protect ourselves from bad actors that might try to influence our reasoning.
 
 ## Research questions
-Is the echo-chamber effect real? If so, how can we measure it?
-Does it have a stronger effect on certain topics? 
-Over time, do communities eventually overcome the effect or does it get worse? Under which condition?
-Does it have a bigger effect on big or small communities?
+What is the echo-chamber effect? How can we measure it?
+Does it have a stronger effect on certain topics? Does the size of a community influence it? What about other factors?
+Over time, do communities eventually overcome the effect or does it get worse? Under which conditions?
 Can we fight it? How?
 
 ## Dataset
-We plan on using the Reddit comments dataset. It is basically a list of 53,851,542 comments with the following structure:
+We plan on using the Reddit comments dataset. It contains all of reddit's comments from its inception and up to March 2017. Reddit already has a rich structure and we plan to take advantage of it. We are going to focus on subreddits, as those are going to be our communities. Since we also have user data we can watch for cross-interaction between subreddits, brigadding, trolls, bots, etc.
+This is basically a list of 53,851,542 JSON objects with comments using the following structure:
 
 {
    "gilded":0,
@@ -39,28 +42,15 @@ We plan on using the Reddit comments dataset. It is basically a list of 53,851,5
    "link_id":"t3_2qyhmp"
 }
 
-It contains all of reddit's comments from its inception and up to March 2017. Reddit already has a rich structure and we plan to take advantage of it. We are going to focus on subreddits, as those are the communities of reddit. Since we also have user data we can watch for cross-interaction between subreddits, brigadding, trolls, etc. 
-Specifically, we plan to mainly use the username, subreddit id, and timestamp. As the project unfolds we might make use of controversiality, downvotes, score, etc in order to go more in depth.
+Specifically, we plan to mainly use the username, subreddit id, and timestamp. As the project unfolds we might make use of controversiality, downvotes, score, etc in order to go more in depth (if time allows).
 
-List the dataset(s) you want to use, and some ideas on how do you expect to get, manage, process and enrich it/them. Show us you've read the docs and some examples, and you've a clear idea on what to expect. Discuss data size and format if relevant.
+Some speedbumps we might find are dead subreddits and known bots posting useless comments, we might have to work a bit if we want to clean the dataset perfectly but it looks mostly solid. The good thing about reddit is that there's probably about a thousand good resources we can find online for such a task.
+
+Size-wise we might also encounter some roadblocks since this is a pretty big dataset. If we find that it's too much to handle we might resort to shrinking substantially, which thanks to the good structure can be done easily.
 
 ## A list of internal milestones up until project milestone 2
-- Get familiar with the phenomenon, find sources
+- Get familiar with the phenomenon of the echo-chamber, find sources and references
 - Set the foundations of our study using well-known concepts from graph and network theory
 
 ## Questions for TAa
 This a pretty broad and complex subject. Given that we 'only' have 2 months time, how deep would we need to go in order to have an acceptable result?
-
-topics that we could research:
-- the battle for net neutrality
-- the US 2016 election coverage (aka russian trolls)
-- the evolution of whistleblowing and it's perception by the public (see Assange, Snowden, Wikileaks, etc) although cannot analyze khashoggi's case unless we retrieve the data ourselves, which is a possibility
-- r/ProjectDiscovery and crowdsourced science
-
-platform ideas:
-Github pages?
-upon finishing the project make a post in r/dataisbeautiful
-with our results (see https://www.reddit.com/r/dataisbeautiful/comments/9sny2t/growth_of_subreddits/)
-
-links of interest:
-https://www.tableau.com/
