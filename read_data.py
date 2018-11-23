@@ -12,4 +12,6 @@ sc = spark.sparkContext
 
 sqlc = SQLContext(sc)
 df = sqlc.read.json('hdfs:///datasets/reddit_data/2017/RC_2017-01.bz2')
+
+#df.write.mode('overwrite').parquet("/home/difernan/data/sample2017.parquet")
 df.write.mode('overwrite').parquet("/home/kamdar/posts.parquet")
