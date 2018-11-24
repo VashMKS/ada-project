@@ -1,4 +1,3 @@
-
 from pyspark.sql import *
 from pyspark.sql.functions import *
 from pyspark.sql.functions import min
@@ -11,9 +10,14 @@ spark.conf.set('spark.sql.session.timeZone', 'UTC')
 sc = spark.sparkContext
 
 sqlc = SQLContext(sc)
-#df = sqlc.read.json('hdfs:///datasets/reddit_data/2017/RC_2017-01.bz2')
 
-df = sqlc.read.parquet('hdfs:///user/difernan/data/*.parquet')#.sample(False,0.1)
+'''
+this script reads all of the parquet files created in my hdfs
+samples 10% of it and combines them into a single parquet files
+for ease of access later
+'''
+
+df = sqlc.read.parquet('hdfs:///user/difernan/data/*.parquet')
 df = df.sample(False,0.1)
 df.write.mode('overwrite').parquet('/home/difernan/data/2012_2016_sampled.parquet')
 
@@ -31,6 +35,8 @@ df.write.mode('overwrite').parquet('/home/difernan/data/2012_2016_sampled.parque
 #        df = sqlc.read.parquet(path)
         #df.write.mode('overwrite').parquet('data/' + save_path + '.parquet')
         #print('Year: ' + str(i) + '     ' + 'month: ' + str(j) + ' saved.')
+
+#df = sqlc.read.json('hdfs:///datasets/reddit_data/2017/RC_2017-01.bz2')
 
 #df.write.mode('overwrite').parquet("/home/difernan/data/sample2017.parquet")
 #df.write.mode('overwrite').parquet("/home/kamdar/posts.parquet")
