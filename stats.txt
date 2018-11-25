@@ -1,0 +1,7 @@
+Total number of comments: 79998223 
+Number of deleted comments: 3414381 
+% of deleted comments: 4 
+Number of comments by removed users: 5706216 
+% comments by deleted users: 7 
+Number of controversial comments: 1770571 
+% of controversial comments: 2 
