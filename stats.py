@@ -7,6 +7,8 @@ from pyspark import SparkContext
 
 from pyspark.sql.functions import lit
 
+import pyspark.sql.functions as F
+
 spark = SparkSession.builder.getOrCreate()
 spark.conf.set('spark.sql.session.timeZone', 'UTC')
 sc = spark.sparkContext
@@ -15,9 +17,9 @@ sqlc = SQLContext(sc)
 
 df_spark = spark.read.parquet("sampled_reduced_col_2016.parquet")
 
-f = open('stats.txt','w+')
+#f = open('/home/kamdar/stats.txt','w+')
 
-
+'''
 total_n_comments = df_spark.count()
 print("Total number of comments: {}".format(str(total_n_comments)))
 f.write("Total number of comments: {} \n".format(str(total_n_comments)))
@@ -46,4 +48,21 @@ perc_controversial_comments = 100 * n_controversial_comments / total_n_comments
 print("% of controversial comments: {}".format(str(perc_controversial_comments)))
 f.write("% of controversial comments: {} \n".format(str(perc_controversial_comments)))
 
-f.close()
+
+total_n_subreddits = df_spark[['subreddit']].distinct().count()
+print("Number of subreddits: {}".format(str(total_n_subreddits)))
+f.write("Number of subreddits: {}".format(str(total_n_subreddits)))
+
+df_subreddit_count = df_spark.groupBy('subreddit').agg(count('*')).select('*',F.col('count(1)').alias('Number of comments')).drop('count(1)')#.withColumnRenamed('count(1)', 'Number of comments')
+df_subreddit_count.write.mode("overwrite").parquet("df_subreddit_count.parquet")
+
+
+df_controversial_per_subr_count = df_spark.filter('controversiality = 1').groupBy('subreddit').agg(count('*')).select('*',F.col('count(1)').alias('N_controversial_comments')).drop('count(1)')#.withColumnRenamed('count(1)', 'N controversial comments')
+df_controversial_per_subr_count.write.mode("overwrite").parquet("df_controversial_per_subr_count.parquet")
+'''
+
+df_created_utc = df_spark[['created_utc']].orderBy(asc('created_utc'))
+df_created_utc.write.mode("overwrite").parquet("df_created_utc.parquet")
+
+
+#f.close()
