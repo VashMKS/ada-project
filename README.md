@@ -35,14 +35,17 @@ As you can see, there is no complicated algorithm ala Facebook to determine rele
 Reddit's developers have been open about the huge amount of information that flows around the site and the responsibility it takes to handle such a social and news outlet. They are very open to the community, value neutrality and work to keep the system clean of bad actors that try to game it. For this project we will make use of the dataset containing all of the comments posted to Reddit since it's inception in 2005 and until March 2017, which should make up for a pretty good (mainly) uncensored dataset on the interaction between and within different communities.
 
 ## So, what is an echo chamber?
-UNDER CONSTRUCTION  
-self-reinforcing opinions  
-splitting of common ground of assumption and fact  
-built-in bias  
-article about echo chambers http://theconversation.com/how-to-check-if-youre-in-a-news-echo-chamber-and-what-to-do-about-it-69999  
-another article (mass media = echo chamber, web = breaking out of it) https://blogs.scientificamerican.com/a-blog-around-the-clock/web-breaks-echo-chambers-or-echo-chamber-is-just-a-derogatory-term-for-community/  
-echo chambers during Brexit (relating online communities to socioeconomic data): https://arxiv.org/ftp/arxiv/papers/1709/1709.05233.pdf  
-a similar project https://dsi.virginia.edu/projects/echo-chambers-audience-and-community
+We call a community an echo chamber when, due to either external factors or by design, a community that shows built-in biases, traits, opinions, etc interacts (relatively) only within itself, self-reinforcing those opinions and biases.
+
+## Why is it bad?
+Echo chambers are as old as communities themselves. We need to understand that this is not a new thing. Before the internet, neighborhoods, family cores and friendship circles were also echo chambers. An echo chamber on an uninformed community can create its own beliefs, its own realities, leading to tribalism ('if you don't belong to my group you can't be saying the truth'). The internet only escalated the problem to epic proportions. If a global echo chamber forms, with no one outside it, suddenly crafted alternative realities and political views become a real, very serious and very dangerous thing.
+
+Our understanding of this phenomenon is still building up and hopefully the articles and examples below will help greatly explain what an echo chamber looks like.
+
+- Article about echo chambers in [the conversation](http://theconversation.com/how-to-check-if-youre-in-a-news-echo-chamber-and-what-to-do-about-it-69999).  
+- Another article in [Scientific American](https://blogs.scientificamerican.com/a-blog-around-the-clock/web-breaks-echo-chambers-or-echo-chamber-is-just-a-derogatory-term-for-community/).  
+- [Echo chambers during Brexit](https://arxiv.org/ftp/arxiv/papers/1709/1709.05233.pdf) (relating online communities to socioeconomic data).  
+- A similar [project](https://dsi.virginia.edu/projects/echo-chambers-audience-and-community).
 
 ### Some examples of echo chambers
 The following subreddits share one trait: dissent is not allowed within them.  
@@ -52,13 +55,14 @@ They are the prime example of an echo chamber. Several of them support hate spee
 - [r/Braincels](https://www.reddit.com/r/Braincels/) the term incel stands for "involuntary celibate". This community is tied by a real, tangible condition. Outsiders are rapidly identified, downvoted and harassed until they leave. This is known to be a pretty aggressive community towards women and a hub for misogyny and it is currently [quarantined](https://www.reddithelp.com/en/categories/rules-reporting/account-and-community-restrictions/quarantined-subreddits) by Reddit, meaning that a warning for highly offensive content is displayed before one can browse the sub.
 - [r/the_donald](https://www.reddit.com/r/the_donald) is a sub where only Trump supporters are allowed. Criticism is not permitted as a rule. Even honest questions about Trump are redirected to another sub. It is engineered to praise his figure with no outsider input.
 
-This are some examples selected not because of their particular content but because it is so easy to find signs of echo chambering within them. Most of this subs have rules in place that prevent anyone to challenge the initial premises upon which the community builds. They usually restrict their userbase (incels(male), Trump supporters) and actively censor content and users through the moderation tools available. The content instantly reflects this: polarizing statements in favor of the premise tend to get high scores in absence of opposition, while critique or views "from the other side" are non-existent.
+These are some examples selected not because of their particular content but because it is so easy to find signs of echo chambering within them. Most of this subs have rules in place that prevent anyone to challenge the initial premises upon which the community builds. They usually restrict their userbase (incels(male), Trump supporters) and actively censor content and users through the moderation tools available. The content instantly reflects this: polarizing statements in favor of the premise tend to get high scores in absence of opposition, while critique or views "from the other side" are non-existent.
 
 ### Candidates to non echo chamber
-An echo chamber doesn't have to be filled with hate speech necessarily, nor does it need to be restricted to a topic (and conversely, not all single-topic subs are echo chambers). It is a place where dissent is not allowed and discussion is silenced. To some extent one could say that Reddit as a whole is an echo chamber due to the voting system: "accepted" views rise to the top while "dissenting" opinions are sink to the deeps, but there are degrees to such phenomena:
+An echo chamber doesn't have to be filled with hate speech necessarily, nor does it need to be restricted to a topic (and conversely, not all single-topic subs are echo chambers). It is a place where dissent is not allowed and discussion is silenced (directly or indirectly). To some extent one could say that Reddit as a whole is an echo chamber due to the voting system: "accepted" views rise to the top while "dissenting" opinions are sink to the deeps, but there are degrees to such phenomena:
 
 - [r/itookapicture](https://www.reddit.com/r/itookapicture/) is dedicated to photography. This sub encourages critique seeking and participating in the discussion in its rules.
 - [r/politics](https://www.reddit.com/r/politics/) is the main subreddits for US politics discussion. While it has no rules in place banning critique or forcing a bias on its users we need to take into account that Reddit users already have a bias since they are not a random sample of the population. This might after all be an echo chamber.
+- More to come...
 
 The main difference between those and the previously listed communities can be appreciated very easily by looking at the rules of those subs (in the sub page, right sidebar for desktop, 'About' tab for mobile). This subs don't filter their userbase (r/twoXchromosomes is about women's perspectives but everyone is allowed to post/comment on it) nor blanket ban certain specific behaviours, users or points of view. Instead the rules provide a generic baseline of etiquette, discussion and formatting guidelines while leaving the content moderation to the upvote system (a.k.a. the users). At a glance, one can see that the content is less polarizing, it is frequent to see people disagree in the comments
 
