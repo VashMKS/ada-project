@@ -3,6 +3,12 @@ from pyspark.sql.functions import *
 from pyspark.sql.functions import min
 from pyspark.sql import SparkSession
 from pyspark import SparkContext
+'''
+Script functionality:
+With this script we obtain a parquet file containing the sample that we are
+using locally. We sample the 10% of the original data in the json file
+'2017/RC_2017-01.bz2'.
+'''
 
 spark = SparkSession.builder.getOrCreate()
 spark.conf.set('spark.sql.session.timeZone', 'UTC')

@@ -2,13 +2,16 @@
 from pyspark.sql import *
 from pyspark.sql.functions import *
 from pyspark.sql.functions import min
-
 from pyspark.sql import SparkSession
 from pyspark import SparkContext
-
 from pyspark.sql.functions import lit
-
 import pyspark.sql.functions as F
+
+'''
+Script functionality:
+With this script we have obtained the stats we talk present in the notebook.
+(Every query is explained with comments)
+'''
 
 # Spark configurations
 spark = SparkSession.builder.getOrCreate()

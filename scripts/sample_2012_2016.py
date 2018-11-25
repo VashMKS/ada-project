@@ -2,9 +2,14 @@
 from pyspark.sql import *
 from pyspark.sql.functions import *
 from pyspark.sql.functions import min
-
 from pyspark.sql import SparkSession
 from pyspark import SparkContext
+
+'''
+Script functionality:
+With this script we obtain a parquet file containing a sample (10% of the total)
+of all the reddit data set from 2012 to 2016 included.
+'''
 
 spark = SparkSession.builder.getOrCreate()
 spark.conf.set('spark.sql.session.timeZone', 'UTC')
