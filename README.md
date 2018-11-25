@@ -1,4 +1,4 @@
-# An Overview on the Echo-chamber Effect
+# The Echo Chamber Effect - A Case Study (provisional title)
 
 ## Abstract
 Has the high connectivity that came with the internet made us better? Is it fostering healthy discussion and debate between the different communities or is the amount of information available distracting us from the real issues of our society? Which sources are reliable? Who to trust? If we form an opinion, was it really our own or were we influenced by someone with an agenda? Do this things even happen or is this all just tin-foil hat speculation?
@@ -14,6 +14,15 @@ We believe that this is really important since big challenges lie ahead of our g
 - Is the echo chamber effect a structural trait of Reddit or just the result of missusage of the system?
 - Can we fight it? What tools does data analysis offer?
 
+## The roadmap
+Now that we are acquainted with the dataset we can say that, while a difficult task, our plan of attack should be as follows:
+- Develop more stats and ways to visualize the dataset and in particular subreddits.
+- Use NLP to analyse and classify the contents
+- After those systems are in place, look at the biggest cases of echo chambering and perform inference
+- Create a heuristic, or several, designed to fit the echo chambers that we found during the analysis.
+- Test our heuristics upon the rest of the communities and see if they perform well and if they allow us to find other echo chambers.
+- Draw conclusions
+
 ## But what is Reddit?
 Reddit is the "frontpage of the internet" (13 years online, more than half a billion monthly users, top 3 most visited website in the US and top 20 in the world). According [to Wikipedia](https://en.wikipedia.org/wiki/Reddit) Reddit is "an American social news aggregation, web content rating, and discussion website". What does this mean? There are two main elements to Reddit:
 
@@ -26,7 +35,7 @@ As you can see, there is no complicated algorithm ala Facebook to determine rele
 Reddit's developers have been open about the huge amount of information that flows around the site and the responsibility it takes to handle such a social and news outlet. They are very open to the community, value neutrality and work to keep the system clean of bad actors that try to game it. For this project we will make use of the dataset containing all of the comments posted to Reddit since it's inception in 2005 and until March 2017, which should make up for a pretty good uncensored dataset on the interaction between and within different communities.
 
 ## So, what is an echo chamber?
-TODO  
+UNDER CONSTRUCTION  
 self-reinforcing opinions  
 splitting of common ground of assumption and fact  
 built-in bias  
