@@ -8,7 +8,9 @@ spark = SparkSession.builder.getOrCreate()
 spark.conf.set('spark.sql.session.timeZone', 'UTC')
 sc = spark.sparkContext
 sqlc = SQLContext(sc)
-
+'''
+Script functionality: Just checking we can use read parquet in the cluster. 
+'''
 # username
 user = 'difernan'
 

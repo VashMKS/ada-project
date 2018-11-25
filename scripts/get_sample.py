@@ -3,13 +3,19 @@ from pyspark.sql.functions import *
 from pyspark.sql.functions import min
 from pyspark.sql import SparkSession
 from pyspark import SparkContext
+'''
+Script functionality:
+With this script we obtain a parquet file containing the sample that we are
+using locally. We sample the 10% of the original data in "posts.parquet" (which
+was obtained previously).
+'''
 
 spark = SparkSession.builder.getOrCreate()
 spark.conf.set('spark.sql.session.timeZone', 'UTC')
 sc = spark.sparkContext
 sqlc = SQLContext(sc)
 
-# WARNING: make sure that your usernam,e is correct befire running the script
+# WARNING: make sure that your username is correct before running the script
 
 # username
 user = 'difernan'
