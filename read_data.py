@@ -4,6 +4,7 @@ from pyspark.sql.functions import min
 
 from pyspark.sql import SparkSession
 from pyspark import SparkContext
+from pyspark.sql import SQLContext
 
 spark = SparkSession.builder.getOrCreate()
 spark.conf.set('spark.sql.session.timeZone', 'UTC')
@@ -17,9 +18,9 @@ samples 10% of it and combines them into a single parquet files
 for ease of access later
 '''
 
-df = sqlc.read.parquet('hdfs:///user/difernan/data/*.parquet')
+df = sqlc.read.parquet("hdfs:///user/difernan/data/*.parquet")
 df = df.sample(False,0.1)
-df.write.mode('overwrite').parquet('/home/difernan/data/2012_2016_sampled.parquet')
+df.write.mode("overwrite").parquet("sample_2012_2016.parquet")
 
 
 #for i in range(2012,2017):
