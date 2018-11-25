@@ -19,7 +19,7 @@ sqlc = SQLContext(sc)
 
 # Read a 10% sample of the 2016 reddit comments
 df_spark = spark.read.parquet("sampled_reduced_col_2016.parquet")
-'''
+
 # Text file to write down the stats (create empty stats.txt file first)
 f = open('/home/kamdar/stats.txt','w+')
 
@@ -77,13 +77,15 @@ df_subreddit_count.write.mode("overwrite").parquet("df_subreddit_count.parquet")
 # Number of controversial comments per subreddit
 df_controversial_per_subr_count = df_spark.filter('controversiality = 1').groupBy('subreddit').agg(count('*')).select('*',F.col('count(1)').alias('N_controversial_comments')).drop('count(1)')#.withColumnRenamed('count(1)', 'N controversial comments')
 df_controversial_per_subr_count.write.mode("overwrite").parquet("df_controversial_per_subr_count.parquet")
-'''
+
 # Just the comments creation 'timestamp' column in dataframe (sorted)
 df_created_utc = df_spark[['created_utc','controversiality']]#.orderBy(asc('created_utc'))
-df_created_utc_controversial = df_created_utc.filter("controversiality == 0")
-#df_created_utc_non_controversial = df_created_utc.filter("controversiality == 0")
+df_created_utc_controversial = df_created_utc.filter("controversiality = 1")
+df_created_utc_non_controversial = df_created_utc.filter("controversiality = 0")
 
 df_created_utc_controversial = df_created_utc_controversial.withColumn("month",F.from_unixtime(df_created_utc_controversial.created_utc,'MM')).drop('created_utc').groupby("month").count()
-#df_created_utc_non_controversial = df_created_utc_non_controversial.groupby("created_utc").count()
+df_created_utc_non_controversial = df_created_utc_non_controversial.withColumn("month",F.from_unixtime(df_created_utc_non_controversial.created_utc,'MM')).drop('created_utc').groupby("month").count()
 
-df_created_utc_controversial.write.mode("overwrite").parquet("df_created_utc_non_controversial.parquet")
+
+df_created_utc_controversial.write.mode("overwrite").parquet("df_created_utc_controversial.parquet")
+df_created_utc_non_controversial.write.mode("overwrite").parquet("df_created_utc_non_controversial.parquet")

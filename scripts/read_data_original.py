@@ -11,5 +11,6 @@ spark.conf.set('spark.sql.session.timeZone', 'UTC')
 sc = spark.sparkContext
 
 sqlc = SQLContext(sc)
-df = sqlc.read.json('hdfs:///datasets/reddit_data/2017/RC_2017-01.bz2')
-df.write.mode('overwrite').parquet("posts.parquet")
+df = sqlc.read.json('hdfs:///datasets/reddit_data/2016/RC_2016-*.bz2')
+df = df.sample(False,0.1)
+df.write.mode('overwrite').parquet("sample2016.parquet")
