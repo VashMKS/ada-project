@@ -3,7 +3,7 @@
 ## Abstract
 Has the high connectivity that came with the internet made us better? Is it fostering healthy discussion and debate between the different communities or is the amount of information available distracting us from the real issues of our society? Which sources are reliable? Who to trust? If we form an opinion, was it really our own or were we influenced by someone with an agenda? Do this things even happen or is this all just tin-foil hat speculation?
 
-Questions like this arise in our day-to-day interactions with modern social media but answering them requires a tremendous amount of effort due to the sheer amount of data at our fingertips. To have a good picture of how a particular technology (the internet no less) is shaping debate we need metrics. The focus of this project is the so called [echo chamber effect](https://en.wikipedia.org/wiki/Echo_chamber_(media)). We will try, from a naive data centric perspective (we are NOT social sciences experts), to understand this phenomenon, describe it, and hopefully come up a tangible metric or benchmark that serves a simple purpose: determining if a certain community constitutes an echo chamber.
+Questions like this arise in our day-to-day interactions with modern social media but answering them requires a tremendous amount of effort due to the sheer amount of data at our fingertips. To have a good picture of how a particular technology (the internet no less) is shaping debate we need metrics. The focus of this project is the so called echo chamber effect ( https://en.wikipedia.org/wiki/Echo_chamber_(media) ). We will try, from a naive data centric perspective (we are NOT social sciences experts), to understand this phenomenon, describe it, and hopefully come up a tangible metric or benchmark that serves a simple purpose: determining if a certain community constitutes an echo chamber and/or to what degree.
 
 We believe that this is really important since big challenges lie ahead of our generation: climate change, the rise of populism or the increasing inequality, both between nations and inside their borders, just to give a few examples. Fake news and crafted narratives have been a hot topic for a while, and while the internet has given certain agents the ability to reach a lot of people with minimal effort it has also provided huge advancements just for the mere fact that sharing information and knowledge is easier than ever in history. Hence, understanding the way in which we communicate through that vast network is key in order to come up with ways to protect ourselves from bad actors that might try to influence our reasoning.
 
@@ -100,6 +100,7 @@ Size-wise we might also encounter some roadblocks since this is a pretty big dat
 - Get the dataset from the cluster (or the subset of the data we are going to use) and filter/sample as necessary
 - Understand and explain the structure of the data
 - Perform some basic stats on the data, get familiar with it
+- Load and try some libraries and tools we could potentially use
 - Once the data is in our hands, trace a roadmap to our goals
 
 ## Internal milestones up until milestone 3
