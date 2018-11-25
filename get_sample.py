@@ -15,18 +15,18 @@ sqlc = SQLContext(sc)
 user = 'difernan'
 
 # paths in the local file system of the cluster
-path_local = '/home/' + user + '/'
+path_local = 'home/' + user + '/'
 
 # paths in the hadoop file system
 hdfs  = 'hdfs:///'
 path_hdfs = hdfs + 'user/' + username + '/'
-path_dataset = hdfs + 'datasets/reddit_data/'
+hdfs_dataset = hdfs + 'datasets/reddit_data/'
 
-# read data for January 2017 into a spark dataframe
-df = sqlc.read.json(path_dataset + '/2017/RC_2017-01.bz2')
+# read the parquet file
+df_spark = sqlc.read.parquet(path_hdfs + "posts.parquet")
 
-# sample 1% of the data
-df_spark_slice = df_spark.sample(False,0.01)
+# sample 10% of the data
+df_spark_slice = df_spark.sample(False,0.1)
 
-# create a parquet file with the sample on the user's hdfs
-df.write.mode('overwrite').parquet("data_2017_01.parquet")
+# save the sample as another parquet file
+df_spark_slice.write.mode('overwrite').parquet("sample_2017_01.parquet")
