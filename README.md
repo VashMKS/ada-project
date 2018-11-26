@@ -3,7 +3,7 @@
 ## Abstract
 Has the high connectivity that came with the internet made us better? Is it fostering healthy discussion and debate between the different communities or is the amount of information available distracting us from the real issues of our society? Which sources are reliable? Who to trust? If we form an opinion, was it really our own or were we influenced by someone with an agenda? Do this things even happen or is this all just tin-foil hat speculation?
 
-Questions like this arise in our day-to-day interactions with modern social media but answering them requires a tremendous amount of effort due to the sheer amount of data at our fingertips. To have a good picture of how a particular technology (the internet no less) is shaping debate we need metrics. The focus of this project is the so called echo chamber effect ( https://en.wikipedia.org/wiki/Echo_chamber_(media) ). We will try, from a naive data centric perspective (we are NOT social sciences experts), to understand this phenomenon, describe it, and hopefully come up a tangible metric or benchmark that serves a simple purpose: determining if a certain community constitutes an echo chamber and/or to what degree.
+Questions like this arise in our day-to-day interactions with modern social media but answering them requires a tremendous amount of effort due to the sheer amount of data at our fingertips. To have a good picture of how a particular technology (the internet no less) is shaping debate we need metrics. The focus of this project is the main argument presented against modern mass social media: the so called echo chamber effect ( https://en.wikipedia.org/wiki/Echo_chamber_(media) ). We will try, from a naive data centric perspective (unfortunately, we are NOT social sciences experts), to understand this phenomenon, describe it, and hopefully come up a tangible metric or benchmark that serves a simple purpose: determining if a certain community constitutes an echo chamber and/or to what degree.
 
 We believe that this is really important since big challenges lie ahead of our generation: climate change, the rise of populism or the increasing inequality, both between nations and inside their borders, just to give a few examples. Fake news and crafted narratives have been a hot topic for a while, and while the internet has given certain agents the ability to reach a lot of people with minimal effort it has also provided huge advancements just for the mere fact that sharing information and knowledge is easier than ever in history. Hence, understanding the way in which we communicate through that vast network is key in order to come up with ways to protect ourselves from bad actors that might try to influence our reasoning.
 
@@ -16,33 +16,36 @@ We believe that this is really important since big challenges lie ahead of our g
 
 ## The roadmap
 Now that we are acquainted with the dataset we can say that, while a difficult task, our plan of attack should be as follows:
-- Develop more stats and ways to visualize the dataset and in particular subreddits.
-- Use NLP to analyse and classify the contents
+- Develop more stats and ways to visualize the dataset and, in particular, subreddits
+- Use NLP to analyse and classify the contents of the comments
 - After those systems are in place, look at the biggest cases of echo chambering and perform inference
 - Create a heuristic, or several, designed to fit the echo chambers that we found during the analysis.
-- Test our heuristics upon the rest of the communities and see if they perform well and if they allow us to find other echo chambers.
+- Test our heuristics upon the rest of the communities and see if they perform well and if they allow us to find other echo chambers
 - Draw conclusions
 
-## But what is Reddit?
+## What is Reddit?
 Reddit is the "frontpage of the internet" (13 years online, more than half a billion monthly users, top 3 most visited website in the US and top 20 in the world). According [to Wikipedia](https://en.wikipedia.org/wiki/Reddit) Reddit is "an American social news aggregation, web content rating, and discussion website". What does this mean? There are two main elements to Reddit:
 
 - The communities of Reddit are called **subreddits**. They are easily identified by a preceding 'r/' (e.g. [r/datascience](https://www.reddit.com/r/datascience/)). These communities are created and managed entirely by their users. One can think of them as topics. [r/gaming](https://www.reddit.com/r/gaming/) is the place you go for anything related to games, while [r/catpictures](https://www.reddit.com/r/catpictures/) is for... well, cat pictures. A subreddit is a place where information about a certain topic is posted, curated, discussed and memed upon by all it's users. And here is where the most important and defining part or Reddit comes up...
 
 - The **voting system**. Reddit has a very simple system (yet with complex ramifications, as we are about to discover) to know what information is relevant. After a post (usually a link to an article on the web, a picture, a question, or just an opinion on something) is submitted to a particular (fitting) subreddit users are allowed to both comment on it and either upvote or downvote the post. Posts with a higher score (upvotes - downvotes) are assumed to be of most relevance to the community and thus will remain higher on the subreddit's feed. Similarly, the comments under that post can also be voted on, the top comment being the one with a higher score. If your content gets upvotes you get karma, also known as Internet Points. They are worth... nothing. Yet this is an effective way in which the system rewards your contributions. They serve as both a reputation metric and a legacy reminding you that you were useful to the community.
 
-As you can see, there is no complicated algorithm ala Facebook to determine relevance, no personalized AI-powered feeds Twitter-style, no Amazon recommenders telling you what to read based on your observed preferences. You want to see dogs, you go to [r/dogs](https://www.reddit.com/r/dogs/), plain and simple. The catch? People vote on what's relevant so if a majority are wrong, biased, or someone with the means gets enough people to believe something, then that something becomes the truth. The voting system is both the greatest advantage and
+As you can see, there is no complicated algorithm ala Facebook to determine relevance, no personalized AI-powered feeds Twitter-style, no Amazon recommenders telling you what to read based on your observed preferences. You want to see dogs, you go to [r/dogs](https://www.reddit.com/r/dogs/), plain and simple. The catch? People vote on what's relevant so if a majority are wrong, biased, or someone with the means gets enough people to believe something, then that something becomes the truth. The voting system is both the greatest advantage and the single point of failure of Reddit.
 
-Reddit's developers have been open about the huge amount of information that flows around the site and the responsibility it takes to handle such a social and news outlet. They are very open to the community, value neutrality and work to keep the system clean of bad actors that try to game it. For this project we will make use of the dataset containing all of the comments posted to Reddit since it's inception in 2005 and until March 2017, which should make up for a pretty good uncensored dataset on the interaction between and within different communities.
+Reddit's developers have been open about the huge amount of information that flows around the site and the responsibility it takes to handle such a social and news outlet. They are very open to the community, value neutrality and work to keep the system clean of bad actors that try to game it. For this project we will make use of the dataset containing all of the comments posted to Reddit since it's inception in 2005 and until March 2017, which should make up for a pretty good (mainly) uncensored dataset on the interaction between and within different communities.
 
 ## So, what is an echo chamber?
-UNDER CONSTRUCTION  
-self-reinforcing opinions  
-splitting of common ground of assumption and fact  
-built-in bias  
-article about echo chambers http://theconversation.com/how-to-check-if-youre-in-a-news-echo-chamber-and-what-to-do-about-it-69999  
-another article (mass media = echo chamber, web = breaking out of it) https://blogs.scientificamerican.com/a-blog-around-the-clock/web-breaks-echo-chambers-or-echo-chamber-is-just-a-derogatory-term-for-community/  
-echo chambers during Brexit (relating online communities to socioeconomic data): https://arxiv.org/ftp/arxiv/papers/1709/1709.05233.pdf  
-a similar project https://dsi.virginia.edu/projects/echo-chambers-audience-and-community
+We call a community an echo chamber when, due to either external factors or by design, a community that shows built-in biases, traits, opinions, etc interacts (relatively) only within itself, self-reinforcing those opinions and biases.
+
+## Why is it bad?
+Echo chambers are as old as communities themselves. We need to understand that this is not a new thing. Before the internet, neighborhoods, family cores and friendship circles were also echo chambers. An echo chamber on an uninformed community can create its own beliefs, its own realities, leading to tribalism ('if you don't belong to my group you can't be saying the truth'). The internet only escalated the problem to epic proportions. If a global echo chamber forms, with no one outside it, suddenly crafted alternative realities and political views become a real, very serious and very dangerous thing.
+
+Our understanding of this phenomenon is still building up and hopefully the articles and examples below will help greatly explain what an echo chamber looks like.
+
+- Article about echo chambers in [the conversation](http://theconversation.com/how-to-check-if-youre-in-a-news-echo-chamber-and-what-to-do-about-it-69999).  
+- Another article in [Scientific American](https://blogs.scientificamerican.com/a-blog-around-the-clock/web-breaks-echo-chambers-or-echo-chamber-is-just-a-derogatory-term-for-community/).  
+- [Echo chambers during Brexit](https://arxiv.org/ftp/arxiv/papers/1709/1709.05233.pdf) (relating online communities to socioeconomic data).  
+- A similar [project](https://dsi.virginia.edu/projects/echo-chambers-audience-and-community).
 
 ### Some examples of echo chambers
 The following subreddits share one trait: dissent is not allowed within them.  
@@ -52,13 +55,14 @@ They are the prime example of an echo chamber. Several of them support hate spee
 - [r/Braincels](https://www.reddit.com/r/Braincels/) the term incel stands for "involuntary celibate". This community is tied by a real, tangible condition. Outsiders are rapidly identified, downvoted and harassed until they leave. This is known to be a pretty aggressive community towards women and a hub for misogyny and it is currently [quarantined](https://www.reddithelp.com/en/categories/rules-reporting/account-and-community-restrictions/quarantined-subreddits) by Reddit, meaning that a warning for highly offensive content is displayed before one can browse the sub.
 - [r/the_donald](https://www.reddit.com/r/the_donald) is a sub where only Trump supporters are allowed. Criticism is not permitted as a rule. Even honest questions about Trump are redirected to another sub. It is engineered to praise his figure with no outsider input.
 
-This are some examples selected not because of their particular content but because it is so easy to find signs of echo chambering within them. Most of this subs have rules in place that prevent anyone to challenge the initial premises upon which the community builds. They usually restrict their userbase (incels(male), Trump supporters) and actively censor content and users through the moderation tools available. The content instantly reflects this: polarizing statements in favor of the premise tend to get high scores in absence of opposition, while critique or views "from the other side" are non-existent.
+These are some examples selected not because of their particular content but because it is so easy to find signs of echo chambering within them. Most of this subs have rules in place that prevent anyone to challenge the initial premises upon which the community builds. They usually restrict their userbase (incels(male), Trump supporters) and actively censor content and users through the moderation tools available. The content instantly reflects this: polarizing statements in favor of the premise tend to get high scores in absence of opposition, while critique or views "from the other side" are non-existent.
 
 ### Candidates to non echo chamber
-An echo chamber doesn't have to be filled with hate speech necessarily, nor does it need to be restricted to a topic (and conversely, not all single-topic subs are echo chambers). It is a place where dissent is not allowed and discussion is silenced. To some extent one could say that Reddit as a whole is an echo chamber due to the voting system: "accepted" views rise to the top while "dissenting" opinions are sink to the deeps, but there are degrees to such phenomena:
+An echo chamber doesn't have to be filled with hate speech necessarily, nor does it need to be restricted to a topic (and conversely, not all single-topic subs are echo chambers). It is a place where dissent is not allowed and discussion is silenced (directly or indirectly). To some extent one could say that Reddit as a whole is an echo chamber due to the voting system: "accepted" views rise to the top while "dissenting" opinions are sink to the deeps, but there are degrees to such phenomena:
 
 - [r/itookapicture](https://www.reddit.com/r/itookapicture/) is dedicated to photography. This sub encourages critique seeking and participating in the discussion in its rules.
 - [r/politics](https://www.reddit.com/r/politics/) is the main subreddits for US politics discussion. While it has no rules in place banning critique or forcing a bias on its users we need to take into account that Reddit users already have a bias since they are not a random sample of the population. This might after all be an echo chamber.
+- More to come...
 
 The main difference between those and the previously listed communities can be appreciated very easily by looking at the rules of those subs (in the sub page, right sidebar for desktop, 'About' tab for mobile). This subs don't filter their userbase (r/twoXchromosomes is about women's perspectives but everyone is allowed to post/comment on it) nor blanket ban certain specific behaviours, users or points of view. Instead the rules provide a generic baseline of etiquette, discussion and formatting guidelines while leaving the content moderation to the upvote system (a.k.a. the users). At a glance, one can see that the content is less polarizing, it is frequent to see people disagree in the comments
 
