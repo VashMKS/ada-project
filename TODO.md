@@ -1,5 +1,9 @@
 # TODO
 
+## Questions
+
+- Can or can we not use libraries in the cluster via egg files? If so, how?
+
 ## Data Retrieval
 
 - Should we work with a subset of the data?
