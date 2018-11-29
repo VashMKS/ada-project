@@ -2,7 +2,7 @@
 
 ## Questions
 
-- Can or can we not use libraries in the cluster via egg files? If so, how?
+- Can or can we not use libraries in the cluster via [egg files](https://stackoverflow.com/questions/2026395/how-to-create-python-egg-file)? If so, how?
 - Rob suggested the LIWC as a list of words to use as sentiment analysis classifier, but can't seem to find anything resembling a list of words.
 
 ## Data Retrieval
@@ -42,6 +42,8 @@
 ## Presentation
 
 - Web for the Data Story [here](https://project-echo-chamber.github.io/)
+- Nice [example](https://dlab.epfl.ch/2017-08-30-of-sheep-and-beer/)
 - Needed graphs (clustering, PCA, data metrics, etc)
+- Section about methodology
 - Craft a collection of links and references
 - Use Rob's image of hell in presentation 11 to talk about this project
