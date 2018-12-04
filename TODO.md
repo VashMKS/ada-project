@@ -2,7 +2,7 @@
 
 ## Questions
 
-- Can or can we not use libraries in the cluster via [egg files](https://stackoverflow.com/questions/2026395/how-to-create-python-egg-file)? If so, how?
+- Can or can we not use libraries in the cluster via [egg files](https://stackoverflow.com/questions/2026395/how-to-create-python-egg-file)? If so, how? [Tutorial on Mattermost](https://mrtopf.de/en/a-small-introduction-to-python-eggs/)
 - Rob suggested the LIWC as a list of words to use as sentiment analysis classifier, but can't seem to find anything resembling a list of words.
 
 ## Data Retrieval
