@@ -8,11 +8,9 @@ Questions like this arise in our day-to-day interactions with modern social medi
 We believe that this is really important since big challenges lie ahead of our generation: climate change, the rise of populism or the increasing inequality, both between nations and inside their borders, just to give a few examples. Fake news and crafted narratives have been a hot topic for a while, and while the internet has given certain agents the ability to reach a lot of people with minimal effort it has also provided huge advancements just for the mere fact that sharing information and knowledge is easier than ever in history. Hence, understanding the way in which we communicate through that vast network is key in order to come up with ways to protect ourselves from bad actors that might try to influence our reasoning.
 
 ## Research questions
-- What is Reddit? What makes it special? What is good/bad about it?  
 - What is the echo-chamber effect? Can we really measure it? If so, how?  
 - Does it have a stronger effect on certain topics? What factors influence it?
-- Is the echo chamber effect a structural trait of Reddit or just the result of missusage of the system?
-- Can we fight it? What tools does data analysis offer?
+- Is the echo chamber effect present in all of Reddit or can it be narrowed down to some communities?
 
 ## The roadmap
 Now that we are acquainted with the dataset we can say that, while a difficult task, our plan of attack should be as follows:
