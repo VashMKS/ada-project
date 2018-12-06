@@ -49,8 +49,6 @@ Our understanding of this phenomenon is still building up and hopefully the arti
 - [Echo chambers during Brexit](https://arxiv.org/ftp/arxiv/papers/1709/1709.05233.pdf) (relating online communities to socioeconomic data).  
 - A similar [project](https://dsi.virginia.edu/projects/echo-chambers-audience-and-community).
 
-this is just a [test](#abstract)
-
 ### Some examples of echo chambers
 The following subreddits share one trait: dissent is not allowed within them.  
 They are the prime example of an echo chamber. Several of them support hate speech, antisemitism and/or extremist views, as is usual with echo chambers. They are the main argument against modern social media as we know it: platforms like Reddit allow their users to confine themselves to this curated spaces where expressing certain points of view while heavily censoring others is not only regarded as normal but also encouraged as etiquette.
