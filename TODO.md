@@ -35,10 +35,10 @@
 ## Echo Metrics (Dídac)
 
 - Our metrics should measure how much of an echo chamber a community (subredit) is by looking at the comments on it.
-- Come up with a few metrics (after the study)
+- Come up with a few metrics (after data exploration)
 - Come up with a list of potential known echo chambers and non echo chambers (subjective?) to serve as test set
-- Test the performance of the metrics in our test set and
-- Come up with nice names for them :D
+- Test the performance of the metrics in our test set and try to use them to find new echo chambers
+- Come up with cool names for the metrics
 
 - First approach: per community basis
   - we study some metrics of Reddit comments (controversiality, polarity, subjectivity). Then create metrics by adding the relevant ones.
@@ -52,7 +52,7 @@
 
 ## Presentation (Dídac)
 
-- Web for the Data Story [here](https://project-echo-chamber.github.io/)
+- Web for the [data story](https://project-echo-chamber.github.io/)
 - Nice [example](https://dlab.epfl.ch/2017-08-30-of-sheep-and-beer/)
 - Needed graphs (clustering, PCA, data metrics, etc)
 - Section about methodology
