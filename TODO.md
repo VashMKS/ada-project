@@ -58,3 +58,25 @@
 - Section about methodology
 - Craft a collection of links and references
 - Use Rob's image of hell in presentation 11 to talk about this project
+
+
+## Skeleton of the final Report/Data Story
+
+#### Introduction
+- Abstract
+- What is Reddit?
+- What is the Echo Chamber Effect
+- The dataset
+  - Explain the dataset and the subset we decided to use, give some basic stats about it (size in terms of nº of communities, nº active users, etc). Here's the [2016 official Reddit report]()
+
+#### Exploring Reddit
+- Methodology
+- Basic Metrics
+  - Polarity
+  - Subjectivity
+  - others
+- The Reddit Graph (TM)
+
+#### Finding Echo Chambers
+
+#### Conclusion
