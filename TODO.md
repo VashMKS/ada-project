@@ -21,7 +21,7 @@
 
 ## NLP / Text Processing (Jorge)
 
-- Libraries to look up: [spaCy](https://spacy.io/), [TextBlob](https://textblob.readthedocs.io/en/dev/), [nltk](https://www.nltk.org/), [Standford core NLP](https://stanfordnlp.github.io/CoreNLP/)
+- Libraries to look up: [spaCy](https://spacy.io/), [TextBlob](https://textblob.readthedocs.io/en/dev/), [nltk](https://www.nltk.org/) (and using [vader](http://www.nltk.org/howto/sentiment.html) with it for sentiment analysis), [Standford core NLP](https://stanfordnlp.github.io/CoreNLP/)
 - [Libaries](https://github.com/shuyo/language-detection) to filter out only English comments
 - [encoding?](https://www.reddit.com/r/redditdev/comments/178mk1/praw_encoding_question/)
 - Tokenization (spaCy, nltk)
