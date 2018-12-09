@@ -74,10 +74,9 @@ In short, the main trait of echo chambers seems to be related to introducing a b
 
 ## Dataset
 We plan on using the Reddit comments dataset. It contains all of reddit's comments from its inception and up to March 2017. Reddit already has a rich structure and we plan to take advantage of it. We are going to focus on subreddits, as those are going to be our communities. Since we also have user data we can watch for cross-interaction between subreddits, brigading, trolls, bots, etc.
-This is basically a list of 53,851,542 JSON objects with comments using the following structure:
+This is basically a list of JSON objects with comments using the following structure:
 
 {  
-
    "gilded":0,  
    "author_flair_text":"Male",  
    "author_flair_css_class":"male",  
@@ -101,7 +100,8 @@ This is basically a list of 53,851,542 JSON objects with comments using the foll
    "link_id":"t3_2qyhmp"  
 }
 
-Specifically, we plan to mainly use the username, subreddit id, and timestamp. As the project unfolds we might make use of controversiality, downvotes, score, etc in order to go more in depth (if time allows).
+Specifically, we plan to use author, body, controversiality, created_utc, gilded, post_id, link_id, parent_id, score, and subreddit_id.  
+It is worth noting that this structure we just showed is not rigid. The example is from January 2015 but others include other fields. The relevant fields for use are consistent through the sample. This is the [current structure](https://github.com/reddit-archive/reddit/wiki/JSON).
 
 Some speedbumps we might find are dead subreddits and known bots posting useless comments, we might have to work a bit if we want to clean the dataset perfectly but it looks mostly solid. The good thing about reddit is that there's probably about a thousand good resources we can find online for such a task.
 

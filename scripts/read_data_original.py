@@ -5,8 +5,7 @@ from pyspark.sql import SparkSession
 from pyspark import SparkContext
 '''
 Script functionality:
-With this script we obtain a parquet file containing a sample (10% of the total)
-of the 2016 data.
+With this script we obtain a parquet file containing all data from 2016 and 2017
 '''
 
 spark = SparkSession.builder.getOrCreate()
@@ -14,6 +13,25 @@ spark.conf.set('spark.sql.session.timeZone', 'UTC')
 sc = spark.sparkContext
 
 sqlc = SQLContext(sc)
-df = sqlc.read.json('hdfs:///datasets/reddit_data/2016/RC_2016-*.bz2')
-df = df.sample(False,0.1)
-df.write.mode('overwrite').parquet("sample2016.parquet")
+
+# features to keep
+to_keep = ['author', '', '', '', '', '', '', '']
+
+# 2016
+df_2016 = sqlc.read.json('hdfs:///datasets/reddit_data/2017/RC_2016-*.bz2')
+
+df_2016_reduced = df.select(*to_keep)
+
+df_2016_reduced.write.mode('overwrite').parquet("full_reduced_dataet_2016.parquet")
+
+# 2017
+df_2017 = sqlc.read.json('hdfs:///datasets/reddit_data/2017/RC_2017-*.bz2')
+
+df_2017_reduced = df_2017.select(*to_keep)
+
+df_2017_reduced.write.mode('overwrite').parquet("full_reduced_dataset_2017.parquet")
+
+# union
+df_final = df_2016_reduced.union(df_2017_reduced)
+
+df_final.write.mode('overwrite').parquet("full_reduced_dataset.parquet")

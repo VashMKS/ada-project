@@ -45,7 +45,7 @@
   - after that, test the heuristic metrics in our subreddit test set
 
 - Second approach: via the whole network
-  - Craft the Reddit Graph (TM): each community is a node, 2 nodes are connected if a certain number of users are active in both communities, edges are thicker the more users are cross-posting between the communities, we can colour the edges using codes (maybe green/red shades for general sentiment of the connection).
+  - Craft the Reddit Graph (TM): each community is a node, 2 nodes are connected if a certain number of users are active in both communities, edges are thicker the more users are cross-posting between the communities, we can colour the edges using codes (maybe blue/red shades for general sentiment of the connection).
   - Use it to study how isolated communities are and use that as a metric for echo chambering (possibly combined with the previous approach)
 
 
@@ -65,7 +65,7 @@
 #### Introduction
 - Abstract
 - What is Reddit?
-- What is the Echo Chamber Effect
+- The Echo Chamber Effect
 - The dataset
   - Explain the dataset and the subset we decided to use, give some basic stats about it (size in terms of nº of communities, nº active users, etc). Here's the [2016 official Reddit report]()
 
