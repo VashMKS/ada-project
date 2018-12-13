@@ -44,7 +44,7 @@ Imagine the following situation: A PC user wants to decide on a brand to buy the
 
 Our understanding of this phenomenon is still building up and hopefully the articles and examples below will help greatly explain what an echo chamber looks like.
 
-- Article about echo chambers in [the conversation](http://theconversation.com/how-to-check-if-youre-in-a-news-echo-chamber-and-what-to-do-about-it-69999).  
+- [Article](http://theconversation.com/how-to-check-if-youre-in-a-news-echo-chamber-and-what-to-do-about-it-69999) about echo chambers in the conversation. [Another one](https://theconversation.com/misinformation-on-social-media-can-technology-save-us-69264).  
 - Another article in [Scientific American](https://blogs.scientificamerican.com/a-blog-around-the-clock/web-breaks-echo-chambers-or-echo-chamber-is-just-a-derogatory-term-for-community/).  
 - [Echo chambers during Brexit](https://arxiv.org/ftp/arxiv/papers/1709/1709.05233.pdf) (relating online communities to socioeconomic data).  
 - A similar [project](https://dsi.virginia.edu/projects/echo-chambers-audience-and-community).
@@ -126,13 +126,20 @@ Size-wise we might also encounter some roadblocks since this is a pretty big dat
 - Test the different metrics in particular communities and observe their performance
 
 
-## Links of Interest
-Source code of reddit (python): https://github.com/reddit  
-Reddit FAQ: https://www.reddit.com/wiki/faq  
-Reddit API: https://www.reddit.com/dev/api/  
-Dev post about controversiality: https://www.reddit.com/r/announcements/comments/293oqs/new_reddit_features_controversial_indicator_for/  
-Lists of bots in Reddit: https://www.reddit.com/r/botwatch/comments/1xojwh/list_of_320_reddit_bots/  
-Some stats about reddit: https://www.similarweb.com/website/reddit.com  
-Reddit user analyzer: https://atomiks.github.io/reddit-user-analyser/  
-News about social engineering: https://www.reddit.com/r/science/comments/a01xix/a_study_has_found_social_network_bots_actually/  
-Other: https://en.wikipedia.org/wiki/Echo_chamber  
+## Want to learn more? - Links of Interest
+
+#### Reddit
+[Source code of reddit (python)](https://github.com/reddit)  
+[Reddit FAQ](https://www.reddit.com/wiki/faq)  
+[Reddit API](https://www.reddit.com/dev/api/)  
+[Reddit dev post about controversiality](https://www.reddit.com/r/announcements/comments/293oqs/new_reddit_features_controversial_indicator_for/)  
+[List of (good, non-phising) bots in Reddit](https://www.reddit.com/r/botwatch/comments/1xojwh/list_of_320_reddit_bots/)  
+[Some stats about reddit](https://www.similarweb.com/website/reddit.com)  
+[Reddit user analyser](https://atomiks.github.io/reddit-user-analyser/)  
+
+### Non-academic articles
+[The #Election2016 Micro-Propaganda Machine](https://medium.com/@d1gi/the-election2016-micro-propaganda-machine-383449cc1fba)
+
+### Research on social media
+[News about social engineering](https://www.reddit.com/r/science/comments/a01xix/a_study_has_found_social_network_bots_actually/)  
+[Observatory on Social Media](http://osome.iuni.iu.edu/)  
