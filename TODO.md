@@ -46,7 +46,9 @@
 
 - Second approach: via the whole network
   - Craft the Reddit Graph (TM): each community is a node, 2 nodes are connected if a certain number of users are active in both communities, edges are thicker the more users are cross-posting between the communities, we can colour the edges using codes (maybe blue/red shades for general sentiment of the connection).
-  - Use it to study how isolated communities are and use that as a metric for echo chambering (possibly combined with the previous approach)
+  - Bipartite graph representation: users vs subreddits they commented on. We can project into subreddits or into users
+  - Statistics about the graph: average degree, degree distribution (power law?), clustering coefficients, centrality of each community/user, average shortest path (between users inside a community and of different communities, and distribution of shortest paths, Milgram experiment)
+
 
 
 

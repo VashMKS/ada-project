@@ -1,9 +1,12 @@
-# Project Echo: Social Networks through a Hacker's Perspective
+# Project Echo: Social Engineering and Election Meddling
 
-## Abstract
+## Introduction
 Has the high connectivity that came with the internet made us better? Is it fostering healthy discussion and debate between the different communities or is the amount of information available distracting us from the real issues of our society? Which sources are reliable? Who to trust? If we form an opinion, was it really our own or were we influenced by someone with an agenda? Do this things even happen or is this all just tin-foil hat speculation?
 
-Questions like this arise in our day-to-day interactions with modern social media but answering them requires a tremendous amount of effort due to the sheer amount of data at our fingertips. To have a good picture of how a particular technology (the internet no less) is shaping debate we to understand how information spreads. In this project we will adopt the perspective of a malicious agent that wants to meddle in the 2016 election via social engineering at large scale and try to demonstrate how the so called [echo chamber effect](https://tinyurl.com/pxpdddo), one of the main arguments presented against modern mass social media, could be exploited to find collectives on the net and target propaganda tailored to their views.  
+Questions like this arise in our day-to-day interactions with modern social media but answering them requires a tremendous amount of effort due to the sheer amount of data at our fingertips. To have a good picture of how a particular technology (the internet no less) is shaping debate we to understand how information spreads.
+
+## Abstract
+In this project we will adopt the perspective of a malicious agent that wants to meddle in the 2016 election via social engineering at large scale and try to demonstrate how the so called [echo chamber effect](https://tinyurl.com/pxpdddo), one of the main arguments presented against modern mass social media, could be exploited to find collectives on the net and target propaganda tailored to their views.  
 We will use natural language processing techniques on massive public data available on Reddit to try and exploit the isolation that some communities experiment in order to classify it's users according to their political views. This would be the first step that a rogue agent would need to perform in order to fine-tune a massive propaganda campaign.
 
 We believe that this is really important since big challenges lie ahead of our generation: climate change, the rise of populism or the increasing inequality, both between nations and within borders, just to give a few examples. Fake news and crafted narratives have been a hot topic for a while, and while the internet has given certain agents the ability to reach a lot of people with minimal effort it has also provided huge advancements just for the mere fact that sharing information and knowledge is easier than ever in history. Hence, understanding the way in which we communicate through that vast network is key in order to come up with ways to protect ourselves from bad actors that might try to influence our reasoning.
@@ -33,6 +36,8 @@ Reddit's developers are open about the huge amount of information that flows aro
 
 ## So, what is an echo chamber?
 We call a community an echo chamber when, due to either external factors or by design, a community that shows built-in biases, traits, opinions, etc interacts (relatively) only within itself, self-reinforcing those opinions and biases.
+
+Conspiracy between homophily and influence (similar users are brought together, and then they influence each other, reinforcing those traits they share)
 
 ### Why is it bad?
 Echo chambers are as old as communities themselves. We need to understand that this is not a new thing. Before the internet, neighbourhoods, family cores and friendship circles were also echo chambers. An echo chamber on an uninformed community can create its own beliefs, its own realities, leading to tribalism ("you don't belong to my group, why should I trust you over them?"). The internet and mass social media only escalated the phenomenon to epic proportions. Due to the insulating nature of echo chambers, other dangerous phenomena that occur naturally in social interaction networks (not only on the internet) get amplified. See [communal reinforcement](https://en.wikipedia.org/wiki/Communal_reinforcement), [confirmation bias](https://en.wikipedia.org/wiki/Confirmation_bias), [missinformation](https://en.wikipedia.org/wiki/Misinformation) and [disinformation](https://en.wikipedia.org/wiki/Disinformation), [filter bubbles](https://en.wikipedia.org/wiki/Filter_bubble), [groupthinking](https://en.wikipedia.org/wiki/Groupthink), or [false consensus](https://en.wikipedia.org/wiki/False_consensus_effect) just to name a few.
