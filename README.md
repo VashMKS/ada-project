@@ -1,25 +1,24 @@
-# The Echo Chamber Effect - A Case Study (provisional title)
+# Project Echo: Social Networks through a Hacker's Perspective
 
 ## Abstract
 Has the high connectivity that came with the internet made us better? Is it fostering healthy discussion and debate between the different communities or is the amount of information available distracting us from the real issues of our society? Which sources are reliable? Who to trust? If we form an opinion, was it really our own or were we influenced by someone with an agenda? Do this things even happen or is this all just tin-foil hat speculation?
 
-Questions like this arise in our day-to-day interactions with modern social media but answering them requires a tremendous amount of effort due to the sheer amount of data at our fingertips. To have a good picture of how a particular technology (the internet no less) is shaping debate we need metrics. The focus of this project is one of the main arguments presented against modern mass social media: the so called echo chamber effect ( https://en.wikipedia.org/wiki/Echo_chamber_(media) ). We will try, from a naive data centric perspective (unfortunately, we are NOT social sciences experts), to understand this phenomenon, describe it, and hopefully come up a tangible metric or benchmark that serves a simple purpose: determining if a certain community constitutes an echo chamber and/or to what degree.
+Questions like this arise in our day-to-day interactions with modern social media but answering them requires a tremendous amount of effort due to the sheer amount of data at our fingertips. To have a good picture of how a particular technology (the internet no less) is shaping debate we to understand how information spreads. In this project we will adopt the perspective of a malicious agent that wants to meddle in the 2016 election via social engineering at large scale and try to demonstrate how the so called [echo chamber effect](https://tinyurl.com/pxpdddo), one of the main arguments presented against modern mass social media, could be exploited to find collectives on the net and target propaganda tailored to their views.  
+We will use natural language processing techniques on massive public data available on Reddit to try and exploit the isolation that some communities experiment in order to classify it's users according to their political views. This would be the first step that a rogue agent would need to perform in order to fine-tune a massive propaganda campaign.
 
-We believe that this is really important since big challenges lie ahead of our generation: climate change, the rise of populism or the increasing inequality, both between nations and inside their borders, just to give a few examples. Fake news and crafted narratives have been a hot topic for a while, and while the internet has given certain agents the ability to reach a lot of people with minimal effort it has also provided huge advancements just for the mere fact that sharing information and knowledge is easier than ever in history. Hence, understanding the way in which we communicate through that vast network is key in order to come up with ways to protect ourselves from bad actors that might try to influence our reasoning.
+We believe that this is really important since big challenges lie ahead of our generation: climate change, the rise of populism or the increasing inequality, both between nations and within borders, just to give a few examples. Fake news and crafted narratives have been a hot topic for a while, and while the internet has given certain agents the ability to reach a lot of people with minimal effort it has also provided huge advancements just for the mere fact that sharing information and knowledge is easier than ever in history. Hence, understanding the way in which we communicate through that vast network is key in order to come up with ways to protect ourselves from bad actors that might try to influence our reasoning.
 
-## Research questions
-- What is the echo-chamber effect? Can we really measure it? If so, how?  
+## Research Questions
+- What is the echo-chamber effect? Is it measurable?
 - Does it have a stronger effect on certain topics? What factors influence it?  
-- Is the echo chamber effect present in all of Reddit or can it be narrowed down to some communities?
+- Can we exploit its existence to classify individuals?
 
-## The roadmap
-Now that we are acquainted with the dataset we can say that, while a difficult task, our plan of attack should be as follows:
-- Develop more stats and ways to visualize the dataset and, in particular, subreddits
-- Use NLP to analyse and classify the contents of the comments
-- After those systems are in place, look at the biggest cases of echo chambering and perform inference
-- Create a heuristic, or several, designed to fit the echo chambers that we found during the analysis.
-- Test our heuristics upon the rest of the communities and see if they perform well and if they allow us to find other echo chambers
-- Draw conclusions
+## Plan of Attack
+- Using the power of the cluster, filter through the data and extract a meaningful dataset to work with, as well as a suitable sample
+- Explore the dataset with statistics and ways to visualize the structure of the data, with special focus on subreddits
+- Perform sentiment analysis on the comments as part of the exploration
+- Restrict ourselves to subreddits about politics and use NLP and Machine Learning to classify the users as conservatives or liberals, or as republicans or democrats.
+- Create a graph of the network to visualize our classification and how the classes populate subreddits
 
 ## What is Reddit?
 Reddit is the "frontpage of the internet" (13 years online, more than half a billion monthly users, top 3 most visited website in the US and top 20 in the world). According to [Wikipedia](https://en.wikipedia.org/wiki/Reddit) Reddit is "an American social news aggregation, web content rating, and discussion website". What does this mean? There are two main elements to Reddit:
@@ -30,7 +29,7 @@ Reddit is the "frontpage of the internet" (13 years online, more than half a bil
 
 As you can see, there is no complicated algorithm ala Facebook to determine relevance, no personalized AI-powered feeds Twitter-style, no Amazon recommenders telling you what to read based on your observed preferences. You want to see dogs, you go to [r/dogs](https://www.reddit.com/r/dogs/), plain and simple. The catch? People vote on what's relevant so if a majority are wrong, biased, or someone with the means gets enough people to believe something, then that something becomes the truth. The voting system is both the greatest advantage and the single point of failure of Reddit.
 
-Reddit's developers are open about the huge amount of information that flows around the site and the responsibility it takes to handle such a social and news outlet (e.g. [yearly summaries](https://redditblog.com/2018/12/04/reddit-year-in-review-2018/), [transparency reports](https://www.reddit.com/wiki/transparency), [engagement in politics](https://redditblog.com/2018/10/17/politics-on-reddit/)). They are very open to the community, value neutrality and seem to work to keep the system clean of bad actors that try to game it. For this project we will make use of the dataset containing all of the comments posted to Reddit since it's inception in 2005 and until March 2017, which should make up for a pretty good (mainly, more on that later) uncensored dataset on the interaction between and within different communities. In particular, since the size of the data is too much for a bunch of students, even with the power of EPFL's IC Cluster, we will restrict ourselves to the entirety of 2016 and the first 3 months of 2017.
+Reddit's developers are open about the huge amount of information that flows around the site and the responsibility it takes to handle such a social and news outlet (e.g. [yearly summaries](https://redditblog.com/2018/12/04/reddit-year-in-review-2018/), [transparency reports](https://www.reddit.com/wiki/transparency), [engagement in politics](https://redditblog.com/2018/10/17/politics-on-reddit/)). They are very open to the community, value neutrality and seem to work to keep the system clean of bad actors that try to game it. For this project we will make use of the dataset containing all of the comments posted to Reddit since it's inception in 2005 and until March 2017, which should make up for a pretty good (mainly, more on that later) uncensored dataset on the interaction between and within different communities. In particular, since the size of the data is too much for a bunch of students, even with the power of EPFL's IC Cluster, we will restrict ourselves to the 200 most active communities in 2016, which is still a very sizable dataset.
 
 ## So, what is an echo chamber?
 We call a community an echo chamber when, due to either external factors or by design, a community that shows built-in biases, traits, opinions, etc interacts (relatively) only within itself, self-reinforcing those opinions and biases.
@@ -120,10 +119,10 @@ Size-wise we might also encounter some roadblocks since this is a pretty big dat
 
 ## Internal milestones up until milestone 3
 - Get familiar with the phenomenon of the echo-chamber, find sources and references
-- Get a list of potential echo chambers (and non echo chambers as well) in reddit to test our metrics
-- Set the foundations of our study using well-known concepts from graph and network theory
-- Propose several metrics to measure the effect
-- Test the different metrics in particular communities and observe their performance
+- Perform sentiment analysis
+- Build an NLP pipeline
+- Train a classifier on data from polarized political subreddits
+- Visualize the network graph and draw conclusions
 
 
 ## Want to learn more? - Links of Interest
