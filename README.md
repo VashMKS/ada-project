@@ -77,6 +77,10 @@ The main difference between those and the previously listed communities can be a
 In short, the main trait of echo chambers seems to be related to introducing a built-in bias, for example via censorship or by carefully selecting who gets a say. A sub about a certain videogame might or might not be an echo chamber, while a sub about *how good* that videogame is with rules in place banning critique or nonfans of the game from posting probably is an echo chamber.
 
 ## Dataset
+We took all comments from 2016 with the following filters:
+- dropped all [deleted] comments and users.
+- dropped comments with less than 3 characters (it's a minimum ) 
+
 We plan on using the Reddit comments dataset. It contains all of reddit's comments from its inception and up to March 2017. Reddit already has a rich structure and we plan to take advantage of it. We are going to focus on subreddits, as those are going to be our communities. Since we also have user data we can watch for cross-interaction between subreddits, brigading, trolls, bots, etc.
 This is basically a list of JSON objects with comments using the following structure:
 
