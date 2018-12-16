@@ -135,6 +135,13 @@ Size-wise we might also encounter some roadblocks since this is a pretty big dat
 - Build an NLP pipeline
 - Train a classifier on data from polarized political subreddits
 - Conclusions
+- Report
+
+## Contributions
+- Dídac: Designing the experiments, write the final report, poster presentation
+- Vikalp: Interaction with the cluster and data mining,
+- Jorge: Intermediate statistics during the first and second milestones, network visualizations
+
 
 ## Want to learn more? - Links of Interest
 
